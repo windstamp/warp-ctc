@@ -15,7 +15,8 @@ using gpuError_t = hipError_t;
 using gpuEvent_t = hipEvent_t;
 #else
 #define gpuSuccess cudaSuccess
-using gpuStream_t = cudaStream_t;
+#define gpuStream_t cudaStream_t
+// using gpuStream_t = cudaStream_t;
 using gpuError_t = cudaError_t;
 using gpuEvent_t = cudaEvent_t;
 #endif
